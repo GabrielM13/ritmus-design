@@ -44,6 +44,7 @@
   color-scheme:light}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{min-height:100%}
 body{margin:0;background:var(--desk);color:var(--fg);font-family:var(--f);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px;transition:background .3s}
@@ -996,6 +997,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSheet();docume
 function clock(){const n=new Date();$('#clock').textContent=n.getHours()+':'+String(n.getMinutes()).padStart(2,'0');const r=document.getElementById('riskLeft');if(r)r.textContent=timeLeft()}
 clock();setInterval(clock,30000);
 render();
+welcome();renderPanel();
 })();
 </script>
 </body>
